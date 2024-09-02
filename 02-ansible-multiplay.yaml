@@ -1,0 +1,12 @@
+- name: Multiplays in single playbook
+  hosts: WEB
+  tasks: 
+    - name: print a message in server
+      ansible.builtin.debug:
+        msg:
+
+- name: Second play
+  hosts: WEB
+  tasks:
+    - name: ping a server
+      ping: 

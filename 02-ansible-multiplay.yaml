@@ -3,7 +3,7 @@
   tasks: 
     - name: print a message in server
       ansible.builtin.debug:
-        #msg:
+        msg: "Hello there srikanth here......."
 
 - name: Second play
   hosts: WEB

@@ -1,0 +1,10 @@
+- name: Variables from prompt
+  hosts: WEB
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter the course name
+    private: false
+  tasks:
+  - name: Print a message using var
+    ansible.builtin.debug:
+    msg: "Hey srikanth is doing {{COURSE}}."

@@ -1,0 +1,10 @@
+- name: Variables usage
+  hosts: WEB
+  vars:
+    COURSE: "DevOps with AWS"
+  tasks:
+  - name: Using variables
+    vars:
+      COURSE: "DevOps with azure"
+    ansible.builtin.debug:
+      msg: "Hi Im srikanth, doing {{COURSE}} course"

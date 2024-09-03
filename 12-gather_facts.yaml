@@ -1,0 +1,7 @@
+- name: Gather facts
+  hosts: WEB
+  become: yes
+  tasks:
+  - name: printing facts
+    ansible.builtin.debug:
+      msg: "{{ansible_facts}}"  #its a reserved key word in ansible

@@ -1,0 +1,12 @@
+- name: Loops example
+  hosts: local
+  become: yes
+  tasks:
+  - name: Priting names using loop
+    ansible.builting.debug:
+      msg: "My friends are : {{item}}" # item is a keyword/reserved word in ansible which takes values from loop
+    loop:
+      - ramesh
+      - srikanth
+      - sreedhar
+      - ugi

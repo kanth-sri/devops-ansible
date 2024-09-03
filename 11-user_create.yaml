@@ -2,6 +2,4 @@
   hosts: WEB
   tasks:
   - name: Checking expense user is already available or not
-    ansible.builtin.command: id expense
-    register: USER #here USER variable stores the output of the above command.
-    
+    ansible.builtin.ping:

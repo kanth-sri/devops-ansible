@@ -1,0 +1,20 @@
+- name: Ansible datatypes
+  hosts: local
+  connection: local #for localhost
+  vars:
+    course: "Devops with AWS" #String type
+    duration: 120 #number
+    live: true #boolean
+    topics: #list
+    - shell
+    - git
+    - ansible
+    - jenkins
+    tools: #map/dictionary key value pairs
+      ci: jenkins
+      cm: ansible
+      scm: git
+  tasks:
+  - name: Print vars having different datatypes.
+    ansible.builtin.debug:
+      msg: "Hey I'm doing {{course}} course, with duration {{duration}} Hours. topics covered {{topics}}, tools use in the course are {{tools}}" 

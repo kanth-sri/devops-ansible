@@ -1,4 +1,4 @@
-- name: Check weather expense user exists or not
+- name: Create expense user if not exists
   hosts: WEB
   tasks:
   - name: Checking expense user is already available or not
@@ -9,3 +9,7 @@
   - name: Print info
     ansible.builtin.debug:
       msg: "{{USER}}"
+  
+  - name: Creating expense user if not exists..
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=0

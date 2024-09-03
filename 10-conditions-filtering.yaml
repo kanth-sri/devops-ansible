@@ -1,0 +1,12 @@
+- name: Check weather a given number is less than or equal to 15
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: my_num
+    prompt: Please enter a number 
+    private: false
+  tasks:
+  - name: Print if the given number is less than or equal to 15
+    ansible.builtin.debug:
+      msg: "The given number {{my_num}} is less than or equal to 15"
+    when: my_num | int <= 15 

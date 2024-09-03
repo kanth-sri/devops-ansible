@@ -9,7 +9,7 @@
   - name: Print info
     ansible.builtin.debug:
       msg: "expense user exists in server"
-    when: USER.rc=0
+    when: USER.rc ==0
   
   - name: Creating expense user if not exists..
     ansible.builtin.command: useradd expense

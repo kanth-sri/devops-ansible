@@ -5,3 +5,7 @@
     ansible.builtin.command: id expense
     register: USER
     ignore_errors: True #errror handling , will handle this error in other task
+  
+  - name: Print info
+    ansible.builting.debug:
+      msg: "{{USER}}"

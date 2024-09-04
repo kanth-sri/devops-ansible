@@ -3,3 +3,6 @@
   tasks:
   - name: Using shell module for redirection/pipes
     ansible.builtin.shell: ps -eaf | grep -i python
+    register: result
+    ansible.builtin.debug:
+      msg: "{{result}}"

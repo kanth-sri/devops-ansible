@@ -5,3 +5,9 @@
   - name: Giving default value for variable
     ansible.builtin.debug:
       msg: "{{course | default ('ansible course')}}"
+
+  - name: Using unique filter to get a unique number from given numbers
+    vars:
+      my_num: [1,2,3,5,5,6,6,7,7,8]
+    ansible.builtin.debug:
+      msg: "{{my_num | ansible.builtin.unique}}"

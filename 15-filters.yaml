@@ -16,12 +16,12 @@
     vars:
       my_num: [10,2,3,55,0,13]
     ansible.builtin.debug:
-      msg: "Min: {{my_num | min}} max: {{my_num | max}}"
+      msg: "Min: {{ my_num | min }} max: {{ my_num | max }}"
   - name: convert string to upper case
-    var:
+    vars:
       my_str: "hello Srikanth"
     ansible.builtin.debug:
-      msg: "{{my_str | upper}}"
+      msg: "{{ my_str | upper }}"
   - name: covert string to lower case
     vars:
       greeting: "Good Moring All"

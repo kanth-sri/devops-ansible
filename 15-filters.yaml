@@ -36,3 +36,5 @@
         trainer: "Siva"
     ansible.builtin.debug:
       msg: "{{courses | dict2items }}"
+
+  

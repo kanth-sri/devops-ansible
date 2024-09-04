@@ -1,0 +1,5 @@
+- name: Command vs shell module
+  hosts: local
+  tasks:
+  - name: Using shell module for redirection/pipes
+    ansible.builtin.shell: ps -eaf | grep -i python

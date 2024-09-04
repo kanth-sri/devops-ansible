@@ -27,3 +27,12 @@
       greeting: "Good Moring All"
     ansible.builtin.debug:
       msg: "{{greeting | lower}}"
+
+  - name: dictionary to items
+    vars:
+      courses:
+        name: "AWS"
+        duration: 120
+        trainer: "Siva"
+    ansible.builtin.debug:
+      msg: "{{courses | dict2items }}"

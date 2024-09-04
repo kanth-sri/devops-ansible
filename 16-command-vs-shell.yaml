@@ -7,3 +7,7 @@
   - name: printing result
     ansible.builtin.debug:
       msg: "{{result}}"
+  - name: using shell module for redirection
+    ansible.builtin.shell: ls -lrt >> /tmp/output.txt
+  - name: command module
+    ansible.builtin.command: pwd

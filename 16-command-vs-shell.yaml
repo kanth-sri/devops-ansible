@@ -4,5 +4,6 @@
   - name: Using shell module for redirection/pipes
     ansible.builtin.shell: ps -eaf | grep -i python
     register: result
+  - name: printing result
     ansible.builtin.debug:
       msg: "{{result}}"

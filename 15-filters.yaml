@@ -1,8 +1,9 @@
 - name: Ansible Filters usage
   hosts: local
-  #connection: local
+  connection: local
   vars:
-    course: "Aws devops"
+    #course: "Aws devops"
+    ccc: "a"
   tasks:
   - name: Giving default value for variable
     ansible.builtin.debug:

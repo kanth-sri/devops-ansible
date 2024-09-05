@@ -26,3 +26,4 @@
        assign_public_ip: true
       image_id: "{{ami_id}}"
     loop: "{{instances}}"
+
